@@ -19,4 +19,4 @@ jobs:
       uses: okteto/deploy-stack@latest
       with:
         build: "true"
-        file: ./backend/docker-compose.yml
+        file: /backend/docker-compose.yml
