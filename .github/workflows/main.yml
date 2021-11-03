@@ -8,6 +8,9 @@ jobs:
   devflow:
     runs-on: ubuntu-latest
     steps:
+    - name: List files in the repository
+      run: |
+        ls ${{ github.workspace }}
     
     - uses: okteto/login@latest
       with:
