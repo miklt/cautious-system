@@ -22,4 +22,4 @@ jobs:
       uses: okteto/deploy-stack@latest
       with:
         build: "true"
-        file: backend/docker-compose.yml
+        file: ${{ github.workspace }}/backend/docker-compose.yml
