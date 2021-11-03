@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: List files in the repository
       run: |
-        ls ${{ github.workspace }}
+        ls /home/runner/work/cautious-system/
     
     - uses: okteto/login@latest
       with:
