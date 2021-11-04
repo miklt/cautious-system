@@ -1,6 +1,7 @@
 icon: https://apps.okteto.com/movies/icon.png
 deploy:  
   - okteto build -t okteto.dev/backend:${OKTETO_GIT_COMMIT} backend
+  - okteto stack deploy --wait
   
 devs:  
   - backend/docker-compose.yml
