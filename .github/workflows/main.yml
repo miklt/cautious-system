@@ -19,11 +19,10 @@ jobs:
         token: ${{ secrets.OKTETO_TOKEN }}
     
     - uses: okteto/namespace@latest
-    - name: List files in the repository
-      run: |
-        ls /github/workspace
+ 
     - name: "Create stack"
       uses: okteto/deploy-stack@latest
       with:
         build: "true"
         file: ${{ github.workspace }}/backend/docker-compose.yml
+        working-directory: ${{ github.workspace}}
